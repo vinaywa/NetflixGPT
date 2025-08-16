@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -92,3 +93,7 @@ NetflixGPT
    using firebase as backend
 
 
+=======
+# NetflixGPT
+A movie streaming website made using React + FireBase as Backend and features using AI.
+>>>>>>> eaf0422337dac1cd3d712823c516411395adfea8
