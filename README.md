@@ -93,7 +93,13 @@ NetflixGPT
    using firebase as backend
 
 
+
+
 =======
 # NetflixGPT
 A movie streaming website made using React + FireBase as Backend and features using AI.
->>>>>>> eaf0422337dac1cd3d712823c516411395adfea8
+Search Bar 
+Movie Suggestions
+sign up 
+Formic Library for form validation
+
