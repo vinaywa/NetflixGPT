@@ -75,22 +75,27 @@ npx create-app-nameofproject -> Create React App
 go to tailwind website and install the config and main css file and copy into them the config and important lines from the website itself
 
 Features
---Login / Sign up
- -sign in /sign up
- --redirect to browse page
+-- Login / Sign up
+-- sign in /sign up
+-- redirect to browse page
 -- Browse page only comes after sign in only
 -- Header 
 -- Main Movie
 -- Trailer in background
 -- Title in description
 -- Movie Suggestion --> Movie is scrollable 
+-- Search Bar
+-- Movie Suggestions
+-- using firebase as backend
+-- Form Validation
+-- useRef Hook
+-- FireBase Setup
+-- Deploying our app to production 
+-- Create sign up user account
 
-NetflixGPT 
 
-  -- Search Bar
-  -- Movie Suggestions
 
-   using firebase as backend
+ 
 
 
 
@@ -102,4 +107,8 @@ Search Bar
 Movie Suggestions
 sign up 
 Formic Library for form validation
+Routing
+Sign in 
+Form Validation 
+Useref HOOK
 
