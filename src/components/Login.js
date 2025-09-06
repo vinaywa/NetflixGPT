@@ -4,8 +4,14 @@ import { checkValidate1,checkValidate2 } from "../utils/validate";
 import { useRef } from "react";
 import { createUserWithEmailAndPassword ,signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../utils/firebase"
+import { useNavigate } from "react-router-dom";
+import {  updateProfile } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { addUser, removeUser } from '../utils/userSlice'
 
 const Login = () => {
+  const dispatch=useDispatch()
+  const navigate=useNavigate()
   const [isSignInForm, setSignInForm] = useState(true); // state variable used for rerendering
   const [ErrorMessage,setErrorMessage]=useState(null);
   const handleClick = () => {
@@ -17,6 +23,7 @@ const Login = () => {
   const phno=useRef(null)
 
   const handleBtn = () => {
+    
     // two ways to get data from input boxes first is by creating state variables and second is using useRef Hook
     let msg="";
     if(isSignInForm){
@@ -37,7 +44,21 @@ const Login = () => {
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
+    updateProfile(auth.currentUser, {
+  displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
+}).then(() => {
+  // Profile updated!
+      const {uid,email,displayName} = auth.currentUser;
+    dispatch(addUser({uid:uid,email:email,displayName:displayName}))
+   navigate("/browse")
+  // ...
+}).catch((error) => {
+  // An error occurred
+  // ...
+  setErrorMessage(error.message)
+});
     console.log(user)
+    
     // ...
   })
   .catch((error) => {
@@ -54,6 +75,8 @@ const Login = () => {
     // Signed in 
     const user = userCredential.user;
     console.log(user)
+
+    navigate("/browse")
     // ...
   })
   .catch((error) => {

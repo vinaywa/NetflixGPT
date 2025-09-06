@@ -72,6 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 npx create-app-nameofproject -> Create React App
+
 go to tailwind website and install the config and main css file and copy into them the config and important lines from the website itself
 
 Features
@@ -92,6 +93,10 @@ Features
 -- FireBase Setup
 -- Deploying our app to production 
 -- Create sign up user account
+-- Implement Sign In user API
+-- Created Redux Store with userSlice
+-- Implemented Sign Out
+-- Update Profile
 
 
 
